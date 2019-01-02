@@ -1,0 +1,142 @@
+{
+	"requestTimeout": 30000,
+	"data": [
+		{
+			"url": "http://{controller.1.ip}:{controller.1.port}/controller",
+			"scenario": {
+				"id": null,
+				"properties": {
+					"serverHostname": "{mqtt.lb.ip}",
+					"serverPort": 5683,
+					"resendInterval": 3000,
+					"minPingInterval": 5000,
+					"identifierRegex": "%identity%server%",
+					"startIdentifier": 0,
+					"scenarioDelay": 0
+				},
+				"count": 1000,
+				"threshold": 1000,
+				"startThreshold": 500,
+				"continueOnError": true,
+				"commands": [
+					{
+						"sendTime": 0,
+						"commandProperties": [
+							{
+								"type": "CODE",
+								"value": "GET"
+							},
+							{
+								"type": "TYPE",
+								"value": "CONFIRMABLE"
+							},
+							{
+								"type": "ACCEPT",
+								"value": "1"
+							},
+							{
+								"type": "OBSERVE",
+								"value": "0"
+							},
+							{
+								"type": "URI_PATH",
+								"value": "root/topic"
+							}
+						]
+					},
+					{
+						"sendTime": 25000,
+						"commandProperties": [
+							{
+								"type": "CODE",
+								"value": "GET"
+							},
+							{
+								"type": "TYPE",
+								"value": "CONFIRMABLE"
+							},
+							{
+								"type": "OBSERVE",
+								"value": "1"
+							},
+							{
+								"type": "URI_PATH",
+								"value": "root/topic"
+							}
+						]
+					},
+					{
+						"sendTime": 1000,
+						"commandProperties": [
+							{
+								"type": "DISCONNECT"
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"url": "http://{controller.1.ip}:{controller.1.port}/controller",
+			"scenario": {
+				"id": null,
+				"properties": {
+					"serverHostname": "{mqtt.lb.ip}",
+					"serverPort": 5683,
+					"resendInterval": 3000,
+					"minPingInterval": 5000,
+					"identifierRegex": "%server%identity%",
+					"startIdentifier": 0,
+					"scenarioDelay": 1000
+				},
+				"count": 1,
+				"threshold": 1000,
+				"startThreshold": 500,
+				"continueOnError": true,
+				"commands": [
+					{
+						"sendTime": 1000,
+						"commandProperties": [
+							{
+								"type": "CODE",
+								"value": "PUT"
+							},
+							{
+								"type": "TYPE",
+								"value": "CONFIRMABLE"
+							},
+							{
+								"type": "ACCEPT",
+								"value": "1"
+							},
+							{
+								"type": "URI_PATH",
+								"value": "root/topic"
+							},
+							{
+								"type": "COUNT",
+								"value": "20"
+							},
+							{
+								"type": "RESEND_TIME",
+								"value": 1000
+							},
+							{
+								"type": "MESSAGE_SIZE",
+								"value": 20
+							}
+						]
+					},
+					{
+						"sendTime": 2000,
+						"commandProperties": [
+							{
+								"type": "DISCONNECT"
+							}
+						]
+					}
+				]
+			}
+		}
+	]
+}

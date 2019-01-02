@@ -1,0 +1,131 @@
+{
+	"requestTimeout": 300000,
+	"data": [
+		{
+			"url": "http://{controller.1.ip}:{controller.1.port}/controller",
+			"scenario": {
+				"id": null,
+				"properties": {
+					"serverHostname": "{mqtt.lb.ip}",
+					"serverPort": 5683,
+					"resendInterval": 6000,
+					"minPingInterval": 5000,
+					"identifierRegex": "%server%identity%",
+					"startIdentifier": 0,
+					"scenarioDelay": 0
+				},
+				"count": 33333,
+				"threshold": 500,
+				"startThreshold": 500,
+				"continueOnError": true,
+				"commands": [
+					{
+						"sendTime": 0,
+						"commandProperties": [
+							{
+								"type": "CODE",
+								"value": "PUT"
+							},
+							{
+								"type": "TYPE",
+								"value": "CONFIRMABLE"
+							}
+						]
+					},
+					{
+						"sendTime": 180000,
+						"commandProperties": [
+							{
+								"type": "DISCONNECT"
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"url": "http://{controller.2.ip}:{controller.2.port}/controller",
+			"scenario": {
+				"id": null,
+				"properties": {
+					"serverHostname": "{mqtt.lb.ip}",
+					"serverPort": 5683,
+					"resendInterval": 3000,
+					"minPingInterval": 5000,
+					"identifierRegex": "%identity%server%",
+					"startIdentifier": 0,
+					"scenarioDelay": 0
+				},
+				"count": 33333,
+				"threshold": 500,
+				"startThreshold": 500,
+				"continueOnError": true,
+				"commands": [
+					{
+						"sendTime": 0,
+						"commandProperties": [
+							{
+								"type": "CODE",
+								"value": "PUT"
+							},
+							{
+								"type": "TYPE",
+								"value": "CONFIRMABLE"
+							}
+						]
+					},
+					{
+						"sendTime": 180000,
+						"commandProperties": [
+							{
+								"type": "DISCONNECT"
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"url": "http://{controller.3.ip}:{controller.3.port}/controller",
+			"scenario": {
+				"id": null,
+				"properties": {
+					"serverHostname": "{mqtt.lb.ip}",
+					"serverPort": 5683,
+					"resendInterval": 3000,
+					"minPingInterval": 5000,
+					"identifierRegex": "%identity%",
+					"startIdentifier": 0,
+					"scenarioDelay": 0
+				},
+				"count": 33334,
+				"threshold": 500,
+				"startThreshold": 500,
+				"continueOnError": true,
+				"commands": [
+					{
+						"sendTime": 0,
+						"commandProperties": [
+							{
+								"type": "CODE",
+								"value": "PUT"
+							},
+							{
+								"type": "TYPE",
+								"value": "CONFIRMABLE"
+							}
+						]
+					},
+					{
+						"sendTime": 180000,
+						"commandProperties": [
+							{
+								"type": "DISCONNECT"
+							}
+						]
+					}
+				]
+			}
+		}
+	]
+}
