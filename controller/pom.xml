@@ -13,7 +13,7 @@
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<org.glassfish.jersey.version>2.23.2</org.glassfish.jersey.version>
+		<org.glassfish.jersey.version>2.27</org.glassfish.jersey.version>
 	</properties>
 
 	<dependencies>
@@ -25,6 +25,11 @@
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
 			<artifactId>jersey-container-grizzly2-http</artifactId>
+			<version>${org.glassfish.jersey.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.inject</groupId>
+			<artifactId>jersey-hk2</artifactId>
 			<version>${org.glassfish.jersey.version}</version>
 		</dependency>
 		<dependency>

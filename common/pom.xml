@@ -10,6 +10,10 @@
 
 	<artifactId>coap-common</artifactId>
 	<name>coap-common</name>
+
+	<properties>
+		<jackson.version>2.9.5</jackson.version>
+	</properties>
 	
 	<dependencies>
 		<dependency>
@@ -31,17 +35,17 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
-			<version>2.4.1</version>
+			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
-			<version>2.4.1</version>
+			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.4.1</version>
+			<version>${jackson.version}</version>
 		</dependency>
 
 		<dependency>
@@ -52,13 +56,13 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.jaxrs</groupId>
 			<artifactId>jackson-jaxrs-json-provider</artifactId>
-			<version>2.4.1</version>
+			<version>${jackson.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.mobius-software.coap</groupId>
 			<artifactId>coap-parser</artifactId>
-			<version>1.0.0.FINAL</version>
+			<version>1.0.0</version>
 		</dependency>
 
 		<dependency>
