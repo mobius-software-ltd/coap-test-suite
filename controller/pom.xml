@@ -9,7 +9,8 @@
 	</parent>
 
 	<artifactId>coap-controller</artifactId>
-
+	<name>coap-controller</name>
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<org.glassfish.jersey.version>2.23.2</org.glassfish.jersey.version>

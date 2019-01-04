@@ -9,7 +9,8 @@
 	</parent>
 
 	<artifactId>coap-runner</artifactId>
-
+	<name>coap-runner</name>
+	
 	<dependencies>
 		<dependency>
 			<groupId>com.mobius-software.coap</groupId>
