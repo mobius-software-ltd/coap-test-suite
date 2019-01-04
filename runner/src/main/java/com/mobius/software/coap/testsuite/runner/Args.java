@@ -4,7 +4,7 @@ public class Args
 {
 	private static final String OK = "OK";
 
-	private static final String REQUEST_FILEPATH_PREFIX = "requestFilepath=";
+	private static final String REQUEST_FILEPATH_PREFIX = "scenarioFile=";
 
 	private final String requestFilepath;
 	
@@ -20,7 +20,7 @@ public class Args
 		Args arguments = new Args(requestFilepath);
 
 		String validateResult = arguments.validate();
-		if (validateResult.equals(OK))
+		if (!validateResult.equals(OK))
 			throw new IllegalArgumentException(validateResult);
 
 		return arguments;
