@@ -110,7 +110,8 @@ public class UDPClient
 		if (session != null)
 		{
 			usedPorts.remove(((InetSocketAddress) session.getChannel().localAddress()).getPort());
-			session.getChannel().close();
+			if (session.getChannel() != null && session.getChannel().isOpen())
+				session.getChannel().close();
 		}
 	}
 }

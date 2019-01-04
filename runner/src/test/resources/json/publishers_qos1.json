@@ -2,11 +2,11 @@
 	"requestTimeout": 30000,
 	"data": [
 		{
-			"url": "http://{controller.1.ip}:{controller.1.port}/controller",
+			"url": "http://controller.1.ip:controller.1.port/controller",
 			"scenario": {
 				"id": null,
 				"properties": {
-					"serverHostname": "{mqtt.lb.ip}",
+					"serverHostname": "broker.ip",
 					"serverPort": 5683,
 					"resendInterval": 3000,
 					"minPingInterval": 5000,
@@ -77,11 +77,11 @@
 			}
 		},
 		{
-			"url": "http://{controller.1.ip}:{controller.1.port}/controller",
+			"url": "http://controller.1.ip:controller.1.port/controller",
 			"scenario": {
 				"id": null,
 				"properties": {
-					"serverHostname": "{mqtt.lb.ip}",
+					"serverHostname": "broker.ip",
 					"serverPort": 5683,
 					"resendInterval": 3000,
 					"minPingInterval": 5000,

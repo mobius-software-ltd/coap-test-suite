@@ -40,7 +40,7 @@ public class ControllerRunner
 			Properties prop = new Properties();
 			prop.load(new FileInputStream(configFile));
 
-			String hostname = prop.getProperty("hostname");
+			String hostname = prop.getProperty("localHostname");
 			Integer port = Integer.parseInt(prop.getProperty("port"));
 			URI baseURI = new URI(null, null, hostname, port, null, null, null);
 			JerseyServer server = new JerseyServer(baseURI);

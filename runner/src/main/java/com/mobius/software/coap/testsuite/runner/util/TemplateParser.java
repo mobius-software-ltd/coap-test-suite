@@ -23,24 +23,24 @@ public class TemplateParser
 
 	public static void initLocal()
 	{
-		getInstance().addTemplate("{controller.1.ip}", "127.0.0.1");
-		getInstance().addTemplate("{controller.1.port}", "9998");
-		getInstance().addTemplate("{controller.2.ip}", "127.0.0.1");
-		getInstance().addTemplate("{controller.2.port}", "9998");
-		getInstance().addTemplate("{controller.3.ip}", "127.0.0.1");
-		getInstance().addTemplate("{controller.3.port}", "9998");
-		getInstance().addTemplate("{mqtt.lb.ip}", "127.0.2.1");
+		getInstance().addTemplate("controller.1.ip", "127.0.0.1");
+		getInstance().addTemplate("controller.1.port", "9998");
+		getInstance().addTemplate("controller.2.ip", "127.0.0.1");
+		getInstance().addTemplate("controller.2.port", "9998");
+		getInstance().addTemplate("controller.3.ip", "127.0.0.1");
+		getInstance().addTemplate("controller.3.port", "9998");
+		getInstance().addTemplate("broker.ip", "127.0.2.1");
 	}
 
 	public static void initRemote()
 	{
-		getInstance().addTemplate("{controller.1.ip}", "104.46.39.194");
-		getInstance().addTemplate("{controller.1.port}", "9998");
-		getInstance().addTemplate("{controller.2.ip}", "51.144.104.152");
-		getInstance().addTemplate("{controller.2.port}", "9998");
-		getInstance().addTemplate("{controller.3.ip}", "40.114.202.153");
-		getInstance().addTemplate("{controller.3.port}", "9998");
-		getInstance().addTemplate("{mqtt.lb.ip}", "13.94.158.185");
+		getInstance().addTemplate("controller.1.ip", "51.136.26.168");
+		getInstance().addTemplate("controller.1.port", "9998");
+		getInstance().addTemplate("controller.2.ip", "51.144.104.152");
+		getInstance().addTemplate("controller.2.port", "9998");
+		getInstance().addTemplate("controller.3.ip", "40.114.202.153");
+		getInstance().addTemplate("controller.3.port", "9998");
+		getInstance().addTemplate("broker.ip", "52.174.41.32");
 	}
 
 	public void addTemplate(String name, String value)

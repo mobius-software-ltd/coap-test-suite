@@ -55,10 +55,11 @@
 							<mainClass>com.mobius.software.coap.testsuite.controller.ControllerRunner</mainClass>
 						</manifest>
 					</archive>
-					<finalName>controller</finalName>
+					<finalName>coap-controller</finalName>
 					<descriptorRefs>
 						<descriptorRef>jar-with-dependencies</descriptorRef>
 					</descriptorRefs>
+					<appendAssemblyId>false</appendAssemblyId>
 				</configuration>
 				<executions>
 					<execution>
