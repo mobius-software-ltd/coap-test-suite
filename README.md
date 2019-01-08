@@ -24,7 +24,7 @@ Now you have the controller (coap-test-suite/controller/target/coap-controller) 
 (coap-test-suite/runner/target/coap-scenario-runner) jar files on your computer.
 To make the work more convenient, create _performance_test_ folder containing
 `coap-controller.jar` and `coap-scenario-runner.jar`.
-Also you should add [JSON files](https://github.com/mobius-software-ltd/mqtt-sn-test-suite/blob/master/runner/src/test/resources/json) and [config.properties](https://github.com/mobius-software-ltd/mqtt-sn-test-suite/blob/master/controller/src/main/resources/config.properties) to this very performance_test folder. 
+Also you should add [JSON files](https://github.com/mobius-software-ltd/coap-test-suite/tree/master/runner/src/test/resources/json) and [config.properties](https://github.com/mobius-software-ltd/coap-test-suite/controller/src/main/resources/config.properties) to this very performance_test folder. 
 Modify scenario file by setting "controller.1.ip" and "broker.ip" with public IP addresses used on controller and broker.
 In config.properties set "localHostname" property with local ip address of the machine running the controller.
 
@@ -56,7 +56,7 @@ java -jar test-runner.jar publishers_qos0.json
 ```
 The command mentioned above is an example of running the test scenario which is described in `publishers_qos0.json` file.
 
-Each [JSON file](https://github.com/mobius-software-ltd/mqtt-sn-test-suite/blob/master/runner/src/test/resources/json) contains different test scenarios. You can separately run each test scenario by indicating the name of a specific [JSON file](https://github.com/mobius-software-ltd/mqtt-sn-test-suite/blob/master/runner/src/test/resources/json). When the test is over you will get the report for each test scenario:
+Each [JSON file](https://github.com/mobius-software-ltd/coap-test-suite/tree/master/runner/src/test/resources/json) contains different test scenarios. You can separately run each test scenario by indicating the name of a specific [JSON file](https://github.com/mobius-software-ltd/coap-test-suite/tree/master/runner/src/test/resources/json). When the test is over you will get the report for each test scenario:
 ```
 +---------- Scenario-ID:  8f7f4b89-ad35-40f7-985e-7280b3d569d4 ---------- Result: SUCCESS ----------+ 
 
