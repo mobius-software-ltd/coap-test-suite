@@ -44,7 +44,7 @@ public class Args
 	{
 		StringBuilder errSb = new StringBuilder();
 		if (requestFilepath == null || requestFilepath.isEmpty())
-			errSb.append("missing required requestFilepath").append("\n");
+			errSb.append("missing required scenarioFile").append("\n");
 
 		return errSb.length() == 0 ? OK : errSb.toString();
 	}
