@@ -1,4 +1,3 @@
-# coap-test-suite
 # Performance Сoap Test Suite
 
 ## Getting started
