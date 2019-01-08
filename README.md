@@ -128,6 +128,6 @@ Each [JSON file](https://github.com/mobius-software-ltd/coap-test-suite/tree/mas
 Each test can be run in its current form.
 Besides you can change the existing test scenarios or add the new ones.
 
-Performance MQTT-SN Test Suite is developed by [Mobius Software](http://mobius-software.com).
+Performance COAP Test Suite is developed by [Mobius Software](http://mobius-software.com).
 
 ## [License](LICENSE.md)
